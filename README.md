@@ -2,12 +2,6 @@
 
 # Getting Started
 ### Installation
-Clone the repo:
-
-```
-git clone https://github.com/hagopj13/node-express-mongoose-boilerplate.git
-cd node-express-mongoose-boilerplate
-```
 
 Install the dependencies:
 
