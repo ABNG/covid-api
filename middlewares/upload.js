@@ -3,7 +3,7 @@ const multer=require('multer');
 
 var storage=multer.diskStorage({
     destination: (req,file,cb)=>{
-        cb(null,"storage/");//create storage folder in root directory manually 
+        cb(null,"public/storage/");//create storage folder in root directory manually 
     },
     filename:(req,file,cb)=>{
         let ext=path.extname(file.originalname);

@@ -50,7 +50,8 @@ if (config.env === 'production') {
 }
 
 //making static folder to make it publically accessable
-app.use("/v1/storage",express.static("storage"));
+app.use(express.static("public"));
+app.use("/v1/storage",express.static("public/storage"));
 
 //set up ejs template for email
 app.set('view engine','ejs');

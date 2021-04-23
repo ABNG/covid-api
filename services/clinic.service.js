@@ -21,7 +21,7 @@ const createClinic = async (req) => {
     email: req.body.email,
   });
   if(req.file){
-    clinic.clinic_image=req.file.path.replace('\\','/');
+    clinic.clinic_image=req.file.path.substring(7).replace('\\','/');
   } 
   /*
   //to upload multiple files
@@ -71,7 +71,7 @@ const updateClinicById = async (clinicId, req) => {
     vip: req.body.vip,
     contact: req.body.contact,
     email: req.body.email,
-    clinic_image: req.file ? req.file.path.replace('\\','/'):null,
+    clinic_image: req.file ? req.file.path.substring(7).replace('\\','/'):null,
   });
   await clinic.save();
   return clinic;
